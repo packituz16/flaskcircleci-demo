@@ -26,7 +26,7 @@ jobs:
     steps:
 #      - checkout
       - attach_workspace:
-          at: /home/circleci/project
+          at: /home/circleci/
       - setup_remote_docker:
           version: 19.03.13
       - run:
