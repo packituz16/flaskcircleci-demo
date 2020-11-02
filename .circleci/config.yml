@@ -16,7 +16,7 @@ jobs:
             - ~/.cache
           key: dependencies-{{ checksum "Pipfile.lock" }}
       - persist_to_workspace:
-          root: project
+          root: /home/circleci/project
           paths: flaskCircleciDemo
 
 
