@@ -1,0 +1,33 @@
+version: 2.1
+
+jobs:
+  Test-Code-Quality:
+    docker:
+      - image: cimg/python:3.7.7
+    steps:
+      - checkout
+      - run: pipenv install
+      - run: |
+          pipenv run pre-commit run --all-files
+
+  Build-Image:
+    docker:
+      - image: cimg/python:3.7.7
+    steps:
+      - checkout
+      - setup_remote_docker:
+          version: 19.03.13
+      - run:
+          name: build and push
+          command: |
+            docker build -t $DOCKER_LOGIN/circleci-demo:latest .
+            echo $DOCKER_PWD | docker login -u $DOCKER_LOGIN --password-stdin
+            docker push $DOCKER_LOGIN/circleci-demo:latest
+
+workflows:
+  Build-and-Test:
+    jobs:
+      - Test-Code-Quality
+      - Build-And-Push-Image:
+          requires:
+            - Test-Code-Quality
