@@ -15,13 +15,17 @@ jobs:
           paths:
             - ~/.cache
           key: dependencies-{{ checksum "Pipfile.lock" }}
+      - persist_to_workspace:
+          root: flaskCircleciDemo
 
 
   Build-And-Push-Image:
     docker:
       - image: cimg/python:3.7.7
     steps:
-      - checkout
+#      - checkout
+      - attach_workspace:
+          at: /home/circleci/project/flaskCircleciDemo
       - setup_remote_docker:
           version: 19.03.13
       - run:
