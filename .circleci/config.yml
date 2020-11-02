@@ -10,7 +10,7 @@ jobs:
       - run: |
           pipenv run pre-commit run --all-files
 
-  Build-Image:
+  Build-And-Push-Image:
     docker:
       - image: cimg/python:3.7.7
     steps:
