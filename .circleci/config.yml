@@ -14,6 +14,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.cache
+          key: dependencies-{{ checksum "Pipfile.lock" }}
 
 
   Build-And-Push-Image:
