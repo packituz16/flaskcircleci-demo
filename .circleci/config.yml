@@ -16,7 +16,8 @@ jobs:
             - ~/.cache
           key: dependencies-{{ checksum "Pipfile.lock" }}
       - persist_to_workspace:
-          root: flaskCircleciDemo
+          root: project
+          paths: flaskCircleciDemo
 
 
   Build-And-Push-Image:
