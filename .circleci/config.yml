@@ -51,7 +51,7 @@ jobs:
             - "e6:3d:fa:c4:44:3b:8b:37:88:94:98:42:c5:50:79:b1"
       - run:
           name: Switch to branch
-          command: git checkout -b new_branch
+          command: git checkout -b new_branch && git pull
 
       - run:
           name: install & update pre-commit
