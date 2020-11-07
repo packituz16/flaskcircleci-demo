@@ -67,7 +67,7 @@ jobs:
            git config --global user.email pacohm94@gmail.com &&
            git config --global user.name packituz-gttz &&
            git push -u origin master &&
-           hub pull-request --on-edit
+           hub pull-request --no-edit
 #           git commit -m "Pre-commit hooks upgrade" &&
 #           git push --set-upstream origin new_branch
 
