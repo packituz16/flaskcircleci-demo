@@ -66,8 +66,8 @@ jobs:
            git add .pre-commit-config.yaml &&
            git config --global user.email pacohm94@gmail.com &&
            git config --global user.name packituz-gttz &&
-           git push -u origin master &&
-           hub pull-request --no-edit
+           git push -u origin new_branch &&
+           hub pull-request --no-edit -b master
 #           git commit -m "Pre-commit hooks upgrade" &&
 #           git push --set-upstream origin new_branch
 
