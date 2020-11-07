@@ -55,7 +55,11 @@ jobs:
             git config --global user.name $( git log --format='%an' $CIRCLE_SHA1^! )
       - run:
           name: Switch to branch
-          command: git checkout -b new_branch && git branch --set-upstream-to=origin/new_branch new_branch && git pull
+          command: |
+            git checkout -b new_branch && \
+            git branch --set-upstream-to=origin/new_branch new_branch && \
+            git pull --no-commit && \
+            git commit -m "Merge"
 
       - run:
           name: install & update pre-commit
