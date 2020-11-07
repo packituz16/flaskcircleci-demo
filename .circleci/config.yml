@@ -74,7 +74,7 @@ workflows:
 #      - Build-And-Push-Image:
 #          requires:
 #            - Test-Code-Quality
-      - Monthly-Update:
+      - Update-Pre-Commit:
           filters:
             branches:
               only:
