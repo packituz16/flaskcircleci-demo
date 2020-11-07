@@ -58,8 +58,7 @@ jobs:
           command: |
             git checkout -b new_branch && \
             git branch --set-upstream-to=origin/new_branch new_branch && \
-            git pull --no-commit && \
-            git commit -m "Merge"
+            git pull --no-commit
 
       - run:
           name: install & update pre-commit
