@@ -71,6 +71,7 @@ jobs:
          command: |
            git status -s | grep .pre-commit-config.yaml &&
            git add .pre-commit-config.yaml &&
+           git commit -m "Updated pre-commit hooks" &&
            git push -u origin new_branch &&
            hub pull-request --no-edit -b master
 #           git commit -m "Pre-commit hooks upgrade" &&
