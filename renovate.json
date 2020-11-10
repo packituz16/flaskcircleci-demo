@@ -4,6 +4,9 @@
   ],
   "timezone": "America/Mexico_City",
   "baseBranches": ["master"],
+  "pipenv": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "updateTypes": [
