@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "baseBranches": ["development"],
+  "packageRules": [
+    {
+      "updateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "schedule": [
+        "every weekend"
+      ]
+    }
+  ],
+  "major": {
+    "schedule": [
+      "every 3 months on the first day of the month"
+    ],
+    "automerge": false
+  }
+}
