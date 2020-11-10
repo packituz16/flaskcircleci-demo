@@ -2,6 +2,7 @@
   "extends": [
     "config:base"
   ],
+  "timezone": "America/Mexico_City",
   "baseBranches": ["development"],
   "packageRules": [
     {
@@ -11,7 +12,7 @@
       ],
       "automerge": true,
       "schedule": [
-        "before 5pm"
+        "before 12pm"
       ]
     }
   ],
