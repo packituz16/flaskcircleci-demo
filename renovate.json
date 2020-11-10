@@ -11,7 +11,7 @@
       ],
       "automerge": true,
       "schedule": [
-        "daily"
+        "before 5pm"
       ]
     }
   ],
