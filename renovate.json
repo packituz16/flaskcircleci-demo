@@ -7,6 +7,9 @@
   "pipenv": {
     "enabled": true
   },
+  "pip_requirements": {
+    "fileMatch": ["testing.txt"]
+  },
   "packageRules": [
     {
       "updateTypes": [
@@ -14,14 +17,8 @@
       ],
       "automerge": true,
       "schedule": [
-        "before 1pm"
+        "before 2pm"
       ]
     }
-  ],
-  "major": {
-    "schedule": [
-      "every 3 months on the first day of the month"
-    ],
-    "automerge": false
-  }
+  ]
 }
