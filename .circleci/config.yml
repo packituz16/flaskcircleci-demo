@@ -6,7 +6,7 @@ orbs:
 jobs:
   Test-Code-Quality:
     docker:
-      - image: cimg/python:3.7.7
+      - image: cimg/python:3.9.5
     steps:
       - checkout
       - restore_cache:
@@ -25,7 +25,7 @@ jobs:
 
   Build-And-Push-Image:
     docker:
-      - image: cimg/python:3.7.7
+      - image: cimg/python:3.9.5
     steps:
       - checkout
 #      - attach_workspace:
@@ -42,7 +42,7 @@ jobs:
 
   Update-Pre-Commit:
     docker:
-      - image: cimg/python:3.7.7
+      - image: cimg/python:3.9.5
     steps:
       - checkout
       - hub/install
