@@ -16,6 +16,6 @@ repos:
         types: [python]
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.7.3
+    rev: v2.19.4
     hooks:
       - id: pyupgrade
